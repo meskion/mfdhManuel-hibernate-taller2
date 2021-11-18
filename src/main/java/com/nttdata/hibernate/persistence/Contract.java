@@ -108,4 +108,11 @@ public class Contract extends AbstractEntity implements Serializable {
 		this.client = client;
 	}
 
+	@Override
+	public String toString() {
+		return "ID: " + getContractId() + "; Cliente: " + getClient().getName() + "; sueldo:  " + getMonthSalary();
+	}
+	
+	
+
 }

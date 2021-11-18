@@ -48,7 +48,8 @@ public class App {
 		clientService.insertNewClient(tellez);
 		
 		clientService.searchByFullName(tellez.getName(), tellez.getFirstSurname(), tellez.getSecondSurname()).forEach(System.out::println);
-		
+		System.out.println("---------------");
+		contractService.searchByClient(tellez).forEach(System.out::println);;
 		session.close();
 		
 	}

@@ -18,8 +18,23 @@ public class ContractDaoImpl extends CommonDaoImpl<Contract> implements Contract
 	public List<Contract> searchByClient(final Client client) {
 
 		beginTransaction();
-		// Contract.class.getName()
+
 		return session.createQuery("FROM " + Contract.class.getName() + " WHERE Client=" + client.getId()).list();
+
+//		//inicializacion de consulta y tablas llamadas con criteria
+//		CriteriaBuilder cb = session.getCriteriaBuilder();
+//		CriteriaQuery<Contract> cquery = cb.createQuery(Contract.class);
+//		Root<Contract> root = cquery.from(Contract.class);
+//		Join<Contract, Client> join = root.join("client"); 
+//		
+//		//where
+//		Predicate pred =cb.equal(join, client.getId());
+//		
+//		//consulta
+//		cquery.select(root).where(pred);
+//		
+//		// resultado de la consulta
+//		return session.createQuery(cquery).getResultList();
 
 	}
 
