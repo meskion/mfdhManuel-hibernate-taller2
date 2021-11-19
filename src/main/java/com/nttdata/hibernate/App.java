@@ -29,6 +29,8 @@ public class App {
 		tellez.setName("Juan Alejandro");
 		tellez.setFirstSurname("Tellez");
 		tellez.setSecondSurname("Rubio");
+		tellez.setUpdatedUser("Manu");
+		tellez.setUpdatedDate(new Date());
 		
 		//Generacion de contratos
 		final  Contract contratoNaturgy = new Contract();
@@ -36,12 +38,16 @@ public class App {
 		contratoNaturgy.setMonthSalary(2000d);
 		contratoNaturgy.setExpirationDate(new Date());
 		contratoNaturgy.setValidityDate(new Date());
+		contratoNaturgy.setUpdatedUser("Manu");
+		contratoNaturgy.setUpdatedDate(new Date());
 		
 		final  Contract contratoDual = new Contract();
 		contratoDual.setClient(tellez);
 		contratoDual.setMonthSalary(1000d);
 		contratoDual.setExpirationDate(new Date());
 		contratoDual.setValidityDate(new Date());
+		contratoDual.setUpdatedUser("Manu");
+		contratoDual.setUpdatedDate(new Date());
 		
 		contractService.insertNewContract(contratoNaturgy);
 		contractService.insertNewContract(contratoDual);

@@ -19,7 +19,7 @@ public class ContractDaoImpl extends CommonDaoImpl<Contract> implements Contract
 
 		beginTransaction();
 
-		return session.createQuery("FROM " + Contract.class.getName() + " WHERE Client=" + client.getId()).list();
+		return session.createQuery("FROM " + Contract.class.getName() + " WHERE client=" + client.getId()).list();
 
 //		//inicializacion de consulta y tablas llamadas con criteria
 //		CriteriaBuilder cb = session.getCriteriaBuilder();

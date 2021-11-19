@@ -4,11 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 /**
  * Entidad Abstracta
  * @author Manu FHD
  *
  */
+@MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
 
 	/**
